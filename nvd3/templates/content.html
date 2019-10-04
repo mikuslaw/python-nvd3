@@ -103,7 +103,7 @@
         {% endfor %}
 
         {% if chart.resize %}
-            nv.utils.windowResize(chart.update);
+            nv.utils.windowResize(function(){ chart.update(); });
         {% endif %}
 
         {# include specific subchart #}
